@@ -1,0 +1,110 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    line-height: 19px;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    background-image:url("https://www.college-de-france.fr/sites/default/files/styles/w_cke_983/public/media/image/2023-07/Marie-Paule%20Cani.jpg?itok=soWHihzV");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #3f0d12;
+}
+
+.wrapper > :not(header), .main-header{
+    margin: 0 auto;
+    max-width: 1640px;
+}
+h1 {
+    font-size: 2.375rem;
+    line-height: 2.375rem;
+    margin-top: 1.1875rem;
+    margin-bottom: 2.375rem;
+}
+
+p, ul, li, blockquote, article {
+    margin-top: 0rem;
+    margin-top: 1.1875rem;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.center-parent {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header {
+    text-align: center;
+}
+
+ul, li {
+    list-style: none;
+    text-align: left;
+}
+
+li {
+    display: inline-block;
+    width: 150px;
+}
+
+.main-nav li {
+    border: 0.1em solid #ddd;
+    /*border-top: none;*/
+}
+
+.main-nav li:first-child {
+    border-top: 0.1em solid #ddd;
+}
+
+.main-nav a {
+    color: #ddd;
+    display: block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    padding-top: calc(1.1875rem / 2);
+    padding-bottom: calc(1.875rem / 2);
+    background-color: #A77366 ;
+}
+
+.main-nav a:hover {
+    background-color: rgb(245, 103, 51);
+    color: #ddd;
+    text-decoration: none;
+}
+h1, .h1{
+    font-size: 2.375rem;
+    line-height: 2.375rem;
+    margin-top: 2.375rem;
+    margin-bottom: 2.375rem;
+    color: #ddd;
+    display: block;
+    font-weight: bold;
+    font-family: 'Tahoma';
+  }

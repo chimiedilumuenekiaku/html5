@@ -1,0 +1,39 @@
+.menu li {
+    display: inline-block;
+}
+.menu a{
+    display: block;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #f00;
+    text-align: center;
+    background-color: #ddd;    
+}
+.menu a:hover {
+    color: #ddd;
+    background-color: #f00;
+}
+.vignettes-container{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.vignettes-container .vignette {
+    width: 250px;
+    display: table-cell;
+    border: 1px solid #ddd;
+    background-color: #e0b;
+    /* pilotage de l'alignement vertical */
+    vertical-align: middle;
+}
+.vignettes-container .vignette:first-child{
+    /*width: 250px;*/
+}
+.vignettes-container .vignette + .vignette {
+    background-color: #0f0;
+}
+.vignettes-container .vignette:last-child {
+    background-color: #25d;
+    /*width: 250px;*/
+}
