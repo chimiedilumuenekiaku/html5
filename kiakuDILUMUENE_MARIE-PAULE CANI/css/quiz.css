@@ -1,0 +1,107 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background-color: #3f0d12;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #3f0d12;
+    width: 90%;
+    max-width: 1000px;
+
+    border: 2px solid #e1e1e6;
+    border-radius: 6px;
+    padding: 22px;
+    box-shadow: 0 0 2px 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px; /*Pour donner l'espace entre question et réponses */
+}
+
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.answers-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Je veux qu'aient deux colonnes du même taille(1fr 1fr)*/
+    gap: 16px; /* Pour donner l'espace entre buttons réponse */
+}
+
+.next-question {
+    margin-top: 32px;
+}
+
+.button {
+    background-color: #0e79b2;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    height: 50px;
+    padding: 0 32px;
+
+    transition-duration: 0.2s;
+
+}
+
+.button:not(:disabled):hover {
+    filter: brightness(0.8);
+}
+
+.answer:disabled {
+    cursor: not-allowed;
+}
+
+.final-message {
+    font-size: 20px;
+    text-align: center;
+}
+
+.final-message span {
+    display: block;
+    margin-top: 8px;
+}
+
+.hide {
+    display: none; /*Pour cacher les contenus de cette class au début.*/
+}
+
+/* Confiuration si la reponse est correct */
+.correct {
+    background-color: #04e762;
+}
+
+/* Confiuration si la reponse est incorrect */
+.incorrect {
+    background-color: #a10101;
+}
