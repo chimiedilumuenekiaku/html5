@@ -15,18 +15,27 @@ body {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 1rem;
     line-height: 1.1875rem;
-    background-color: #3f0d12;
+    background-color: #3f0d12d7;
 }
 
-.wrapper > :not(header), .main-header{
-    margin: 0 auto;
-    max-width: 1640px;
+.wrapper {
+    padding: 0 10px 10px 10px;
 }
+
 h1 {
     font-size: 2.375rem;
     line-height: 2.375rem;
     margin-top: 1.1875rem;
     margin-bottom: 2.375rem;
+
+}
+h1, h2 {
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
 }
 
 p, ul, li, blockquote, article {
@@ -96,21 +105,125 @@ li {
     text-decoration: none;
 }
 
-
-
-
-.main-footer {
-    position: relative;
-    top:4em;
-    background-color: #8885856b;
-    background-color: #80b99862;
-    padding: 10px 0;
-    text-align: center;
-    margin: 0.5 0 0 0;
-    border: 0.1em solid #aaa;
+/* Section */
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.main-footer>p {
+section h1 {
+    text-align: center;
+    margin-bottom: 1rem;
     color: #ddd;
-    margin-bottom: 0.5em;
+}
+
+section h2 {
+    color: #ddd;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+/* Article */
+article {
+    margin-bottom: 2rem;
+}
+
+/* Style pour l'image dans les paragraphes */
+figure {
+    display: inline-block;
+    float:left; /* L'image s'aligne à gauche dans le paragraphe */
+    margin: 0 15px 10px 0; /* Espacement autour de l'image */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espace entre l'image et la bordure */
+    /*background-color: #fff; /* Fond blanc autour de l'image */
+}
+
+figure img {
+    width: 300px; /* Taille fixe de l'image */
+    height: auto; /* Conserver les proportions */
+}
+
+/* Réinitialisation du float pour les paragraphes suivants */
+p::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #8885856b;
+    background-color: #80b99862;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.main-footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.main-footer .social-links a:hover {
+    color: #ffcc00;
+}
+
+/* Images */
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h1 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .main-footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav .nav-container a {
+        font-size: 0.9rem;
+    }
+
+    section h1 {
+        font-size: 1.2rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+
+    .main-footer {
+        font-size: 0.8rem;
+    }
 }

@@ -10,7 +10,7 @@ button {
 }
 
 body {
-    background-color: #3f0d12;
+    background: #3f0d12;
     color: #fff;
     height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    background-color: #3f0d12;
+    background: #3f0d12;
     width: 90%;
     max-width: 1000px;
 
@@ -104,4 +104,74 @@ body {
 /* Confiuration si la reponse est incorrect */
 .incorrect {
     background-color: #a10101;
+}
+
+/* Barre de progression */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e1e1e6;
+    border-radius: 5px;
+    margin: 16px 0;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: #0e79b2;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+
+/* Tablettes et petits écrans (768px et moins) */
+@media (max-width: 768px) {
+    .question {
+        font-size: 20px;
+    }
+
+    .answers-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 12px; /* Réduit l'espacement entre les réponses */
+    }
+
+    .button {
+        font-size: 14px;
+        height: 45px;
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    .final-message {
+        font-size: 18px;
+    }
+}
+
+/* Mobiles (480px et moins) */
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .answers-container {
+        grid-template-columns: 1fr; /* Toujours une seule colonne */
+        gap: 10px;
+    }
+
+    .button {
+        font-size: 13px;
+        height: 40px;
+    }
+
+    .final-message {
+        font-size: 16px;
+    }
 }
